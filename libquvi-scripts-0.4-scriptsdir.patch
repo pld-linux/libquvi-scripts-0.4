@@ -1,0 +1,31 @@
+--- libquvi-scripts-0.4.21/libquvi-scripts.pc.in.orig	2013-11-30 16:50:24.000000000 +0100
++++ libquvi-scripts-0.4.21/libquvi-scripts.pc.in	2015-12-26 08:51:27.051424300 +0100
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+ datarootdir=@datarootdir@
+ datadir=@datadir@
+-scriptsdir=@datadir@/libquvi-scripts
++scriptsdir=@datadir@/libquvi-scripts/0.4
+ versionfile=${scriptsdir}/version
+ 
+ Name: libquvi-scripts
+--- libquvi-scripts-0.4.21/share/Makefile.am.orig	2013-11-30 16:50:24.000000000 +0100
++++ libquvi-scripts-0.4.21/share/Makefile.am	2015-12-26 08:52:47.591420925 +0100
+@@ -92,5 +92,6 @@
+ endif
+ endif # WITH_FIXME
+ 
+-nobase_dist_pkgdata_DATA=	$(DIST_lua)
++pkgverdatadir = $(pkgdatadir)/0.4
++nobase_dist_pkgverdata_DATA=	$(DIST_lua)
+ EXTRA_DIST=	$(DIST_lua)
+--- libquvi-scripts-0.4.21/share/lua/Makefile.am.orig	2013-11-30 16:50:24.000000000 +0100
++++ libquvi-scripts-0.4.21/share/lua/Makefile.am	2015-12-26 08:53:16.798086532 +0100
+@@ -1,5 +1,6 @@
+ 
+-nobase_dist_pkgdata_DATA=	version
++pkgverdatadir = $(pkgdatadir)/0.4
++nobase_dist_pkgverdata_DATA=	version
+ DISTCLEANFILES=	version
+ EXTRA_DIST=	version
+ 
