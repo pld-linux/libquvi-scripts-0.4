@@ -2,7 +2,7 @@ Summary:	Embedded lua scripts that libquvi 0.4.x uses for parsing the media deta
 Summary(pl.UTF-8):	Skrypty osadzonego lua wykorzystywane przez libquvi 0.4.x do analizy multimediów
 Name:		libquvi-scripts-0.4
 Version:	0.4.21
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Applications
 Source0:	http://downloads.sourceforge.net/quvi/libquvi-scripts-%{version}.tar.xz
@@ -14,6 +14,7 @@ BuildRequires:	automake
 BuildRequires:	rpmbuild(macros) >= 1.446
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Obsoletes:	libquvi-scripts < 0.9
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
